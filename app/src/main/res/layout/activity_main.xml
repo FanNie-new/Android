@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/main_color"
+        >
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/main_indicator"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/search_btn"
+            >
+
+            <ImageView
+                android:src="@mipmap/search"
+                android:layout_centerInParent="true"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/content_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="60dp"
+        android:overScrollMode="never" />
+    <!--    android:overScrollMode="never" 去阴影 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/main_play_control_item"
+        android:background="#dfdfdf"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <cn.edu.fan.himalaya.views.RoundRectImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/main_track_cover"
+            android:src="@mipmap/logo"
+            android:layout_marginLeft="15dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_head_title"
+                android:text="@string/listener_as_you_like_text"
+                android:textSize="18sp"
+                android:textColor="#444444"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_sub_title"
+                android:text="@string/app_name"
+                android:textSize="14sp"
+                android:textColor="#7f7f7f" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/main_play_control"
+            android:src="@drawable/selector_player_play"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+</RelativeLayout>

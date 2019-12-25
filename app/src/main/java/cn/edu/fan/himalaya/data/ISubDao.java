@@ -1,0 +1,17 @@
+package cn.edu.fan.himalaya.data;
+
+import com.ximalaya.ting.android.opensdk.model.album.Album;
+
+//Subscription Dao
+public interface ISubDao {
+
+    void setCallback(ISubDaoCallback callback);
+    //添加专辑订阅
+    void addAlbum(Album album);
+
+    //删除订阅内容
+    void delAlbum(Album album);
+
+    //获取订阅内容
+    void listAlbums();
+}
